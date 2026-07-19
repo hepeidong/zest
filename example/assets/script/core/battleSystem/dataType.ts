@@ -1,5 +1,5 @@
 import { Vec3 } from "cc";
-import { Direction, IEntity, IPrimaryEntity } from "../../cck";
+import { Direction, IEntity, IPrimaryEntity } from "zest";
 import { NpcType } from "../../lib/NpcTypeEnum";
 
 

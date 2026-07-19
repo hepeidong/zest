@@ -1,4 +1,4 @@
-import { DataReader, Debug, IEntity, app, decorator, ecs, ui } from "../../cck";
+import { excel, Debug, IEntity, app, decorator, ecs, ui } from "zest";
 import { NpcType } from "../../lib/NpcTypeEnum";
 import { ModelEnum } from "../ModelEnum";
 import { UIEnum } from "../UIEnum";
@@ -8,7 +8,7 @@ import { Hero } from "../view/battleView/Hero";
 import { AttackSystem } from "./AttackSystem";
 import { DataType, EnemyWeapon, HeroWeapon, NpcIdentity } from "./dataType";
 
-const {cckclass, updateAfter} = decorator;
+const {zestClass, updateAfter} = decorator;
 
 interface SettlementEntity extends IEntity {
     NpcIdentity: NpcIdentity;
@@ -16,7 +16,7 @@ interface SettlementEntity extends IEntity {
     EnemyWeapon: EnemyWeapon;
 }
 
-@cckclass("SettlementSystem")
+@zestClass("SettlementSystem")
 @updateAfter(AttackSystem)
 export class SettlementSystem extends ecs.System<SettlementEntity> {
 
@@ -28,13 +28,13 @@ export class SettlementSystem extends ecs.System<SettlementEntity> {
     private _attackingEnemyId: string;
     private _battleModel: BattleModel;
     protected onCreate(): void {
-        this._attackCd = DataReader.file.Const.get("attackCd").value;
+        this._attackCd = excel.file.Const.get("attackCd").value;
         this._timeout = 0;
         this._heroAttacked = false;
         this._heroId = "";
         this._attackedEmemyId = "";
         this._attackingEnemyId = "";
-        this._battleModel = app.getModel(ModelEnum.BattleModel);
+        this._battleModel = app.game.getModel(ModelEnum.BattleModel);
     }
 
     private attackHero() {

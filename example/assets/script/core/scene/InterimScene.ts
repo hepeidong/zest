@@ -1,9 +1,9 @@
-import { app, decorator, ui } from "../../cck";
+import { app, decorator, ui } from "zest";
 import { InterimSceneView } from "./InterimSceneView";
 
-const {cckclass, template} = decorator;
+const {zestClass, template} = decorator;
 
-@cckclass("InterimScene")
+@zestClass("InterimScene")
 @template("interim")
 export class InterimScene extends app.Scene<InterimSceneView> {
 

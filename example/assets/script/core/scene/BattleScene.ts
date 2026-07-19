@@ -1,10 +1,10 @@
-import { app, decorator, ui } from "../../cck";
+import { app, decorator, ui } from "zest";
 import { CameraPool } from "../CameraPool";
 import { UIEnum } from "../UIEnum";
 
-const {cckclass, template} = decorator;
+const {zestClass, template} = decorator;
 
-@cckclass("BattleScene")
+@zestClass("BattleScene")
 @template("battle")
 export class BattleScene extends app.Scene {
     
@@ -13,6 +13,7 @@ export class BattleScene extends app.Scene {
     }
 
     onStart() {
+        ui.openTouchEffect(false);
         ui.open(UIEnum.GameBattle);
     }
 

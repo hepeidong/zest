@@ -49,6 +49,15 @@ declare namespace config {
 		public readonly cost: number;
 	}
 
+	export class Wing{
+		/**ID */
+		public readonly ID: number;
+		/**序号_等级 */
+		public readonly IDLevel: string;
+		/**等级 */
+		public readonly Level: number;
+	}
+
 	export class Hero{
 		/**id */
 		public readonly id: number;
@@ -88,17 +97,18 @@ interface IFileData {
 	GameLevel?: IContainer<config.GameLevel>;
 	HeroWeapon?: IContainer<config.HeroWeapon>;
 	WeaponLevel?: IContainer<config.WeaponLevel>;
+	Wing?: IContainer<config.Wing>;
 	Hero?: IContainer<config.Hero>;
 	HeroLevel?: IContainer<config.HeroLevel>;
 	Enemy?: IContainer<config.Enemy>;
 }
-type cck_file_data = {
+type cc_zest_file_data = {
 	[K in keyof IFileData]: Readonly<IFileData[K]>;
 }/**配置表文件容器类型 */
 interface IContainer<T> {
     readonly keys: number[]|string[];
     readonly length: number;
-    readonly fields: cck_file_field_type<T>;
+    readonly fields: cc_zest_file_field_type<T>;
     /**
      * 根据id获取配置表的数据
      * @param id 
@@ -122,5 +132,5 @@ interface IContainer<T> {
      */
     contains(id: number|string): boolean;
 }
-type cck_file_field<T> = { [K in keyof T]: K; }
-type cck_file_field_type<T> =  Readonly<cck_file_field<T>>;
+type cc_zest_file_field<T> = { [K in keyof T]: K; }
+type cc_zest_file_field_type<T> =  Readonly<cc_zest_file_field<T>>;

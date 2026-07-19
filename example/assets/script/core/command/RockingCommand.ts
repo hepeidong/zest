@@ -1,14 +1,14 @@
-import { app, Debug, decorator } from "../../cck";
+import { app, Debug, decorator } from "zest";
 import { NoticeType } from "../CommandEnum";
 import { RockingModel } from "../model/RockingModel";
 import { ModelEnum } from "../ModelEnum";
 
-const {cckclass} = decorator;
+const {zestClass} = decorator;
 
-@cckclass("RockingCommand")
+@zestClass("RockingCommand")
 export class RockingCommand extends app.Command {
     execute(notification: INotification): void {
-        const model = app.getModel<RockingModel>(ModelEnum.RockingModel);
+        const model = app.game.getModel<RockingModel>(ModelEnum.RockingModel);
         if (notification.getType() === NoticeType.RockingCommand_rotation) {
             const angle = notification.getBody();
             model.setAngle(angle);

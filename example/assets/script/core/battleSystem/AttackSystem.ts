@@ -1,10 +1,9 @@
-import { Debug, IEntity, decorator, ecs } from "../../cck";
-import { NpcType } from "../../lib/NpcTypeEnum";
+import { Debug, IEntity, decorator, ecs } from "zest";
 import { Hero } from "../view/battleView/Hero";
 import { FineEnemySystem } from "./FineEnemySystem";
 import { AttackTarget, DataType, HeroWeapon, NpcIdentity } from "./dataType";
 
-const {cckclass, updateAfter, updateInGroup} = decorator;
+const {zestClass, updateAfter, updateInGroup} = decorator;
 
 interface IAttackEntity extends IEntity {
     NpcIdentity: NpcIdentity;
@@ -12,7 +11,7 @@ interface IAttackEntity extends IEntity {
     HeroWeapon: HeroWeapon;
 }
 
-@cckclass("AttackSystem")
+@zestClass("AttackSystem")
 @updateInGroup(ecs.SimulationGroup)
 @updateAfter(FineEnemySystem)
 export class AttackSystem extends ecs.System<IAttackEntity> {

@@ -1,5 +1,7 @@
 export enum UIEnum {
     GameBattle = "GameBattle",
     GameHall = "GameHall",
-    GameEnd = "GameEnd"
+    GameEnd = "GameEnd",
+    GameGuide = "GameGuide",
+    GuideTest1 = "GuideTest1"
 }

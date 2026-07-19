@@ -1,5 +1,5 @@
 import { director, sp, Vec3 } from "cc";
-import { app, DataReader, Debug, decorator, Direction, ecs, IEntity, tools, utils } from "../../cck";
+import { app, excel, Debug, decorator, Direction, ecs, IEntity, tools, utils } from "zest";
 import { RockingModel } from "../model/RockingModel";
 import { ModelEnum } from "../ModelEnum";
 import { Enemy } from "../view/battleView/Enemy";
@@ -8,7 +8,7 @@ import { DataType, DirectionData, NpcIdentity, Position } from "./dataType";
 import { NpcType } from "../../lib/NpcTypeEnum";
 import { BattleModel } from "../model/BattleModel";
 
-const {cckclass, updateInGroup} = decorator;
+const {zestClass, updateInGroup} = decorator;
 
 interface IDirectionEntity extends IEntity {
     Direction: DirectionData;
@@ -19,15 +19,15 @@ interface IDirectionEntity extends IEntity {
 
 const _scaleTemp = new Vec3();
 
-@cckclass("DirectionSystem")
+@zestClass("DirectionSystem")
 @updateInGroup(ecs.SimulationGroup)
 export class DirectionSystem extends ecs.System<IDirectionEntity> {
 
     private _statusModel: BattleModel;
     private _rockingModel: RockingModel;
     protected onCreate(): void {
-        this._statusModel = app.getModel(ModelEnum.BattleModel);
-        this._rockingModel = app.getModel(ModelEnum.RockingModel);
+        this._statusModel = app.game.getModel(ModelEnum.BattleModel);
+        this._rockingModel = app.game.getModel(ModelEnum.RockingModel);
     }
 
     private getAnimation(direction: tools.Direction) {
@@ -98,14 +98,14 @@ export class DirectionSystem extends ecs.System<IDirectionEntity> {
                 if (npcObject.getContacted()) {
                     direction = Direction.Type.None;
                 }
-                const moveSpeed = DataReader.file.Const.get("enemyMoveSpeed").value;
+                const moveSpeed = excel.file.Const.get("enemyMoveSpeed").value;
                 this.setEntityDirection(entity, npcObject, direction, moveSpeed);
             }
         }
         else if (entity.NpcIdentity.identity === NpcType.Hero && !die) {
             if (entity.Direction.direction !== this._rockingModel.data.direction) {
                 npcObject = entity.node.getComponent(Hero);
-                const moveSpeed = DataReader.file.Const.get("heroMoveSpeed").value;
+                const moveSpeed = excel.file.Const.get("heroMoveSpeed").value;
                 this.setEntityDirection(entity, npcObject, this._rockingModel.data.direction, moveSpeed);
             }
         }

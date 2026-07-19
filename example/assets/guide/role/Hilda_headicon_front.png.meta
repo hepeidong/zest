@@ -1,0 +1,134 @@
+{
+  "ver": "1.0.25",
+  "importer": "image",
+  "imported": true,
+  "uuid": "268afd99-94e2-4d49-ae54-04ed06b9e205",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "268afd99-94e2-4d49-ae54-04ed06b9e205@6c48a",
+      "displayName": "Hilda_headicon_front",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "imageUuidOrDatabaseUri": "268afd99-94e2-4d49-ae54-04ed06b9e205",
+        "isUuid": true,
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "visible": false
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "268afd99-94e2-4d49-ae54-04ed06b9e205@f9941",
+      "displayName": "Hilda_headicon_front",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": -0.5,
+        "offsetY": 0,
+        "trimX": 1,
+        "trimY": 1,
+        "width": 960,
+        "height": 373,
+        "rawWidth": 963,
+        "rawHeight": 375,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "268afd99-94e2-4d49-ae54-04ed06b9e205@6c48a",
+        "atlasUuid": "",
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [
+            -480,
+            -186.5,
+            0,
+            480,
+            -186.5,
+            0,
+            -480,
+            186.5,
+            0,
+            480,
+            186.5,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ],
+          "uv": [
+            1,
+            374,
+            961,
+            374,
+            1,
+            1,
+            961,
+            1
+          ],
+          "nuv": [
+            0.0010384215991692627,
+            0.0026666666666666666,
+            0.9979231568016614,
+            0.0026666666666666666,
+            0.0010384215991692627,
+            0.9973333333333333,
+            0.9979231568016614,
+            0.9973333333333333
+          ],
+          "minPos": [
+            -480,
+            -186.5,
+            0
+          ],
+          "maxPos": [
+            480,
+            186.5,
+            0
+          ]
+        }
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "fixAlphaTransparencyArtifacts": true,
+    "hasAlpha": true,
+    "redirect": "268afd99-94e2-4d49-ae54-04ed06b9e205@f9941"
+  }
+}

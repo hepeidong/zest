@@ -1,7 +1,7 @@
-import { DataReader, app, decorator, tools } from "../../cck";
+import { excel, app, decorator, tools } from "zest";
 import { EventType } from "../EventType";
 
-const {cckclass, model, prop} = decorator;
+const {zestClass, model, prop} = decorator;
 
 class BattleData {
     gameStart: boolean = false;
@@ -18,7 +18,7 @@ class BattleData {
     enemyHP: number = 0;
 }
 
-@cckclass("BattleModel")
+@zestClass("BattleModel")
 @model(BattleData)
 export class BattleModel extends app.Document<BattleData> {
     
@@ -27,14 +27,14 @@ export class BattleModel extends app.Document<BattleData> {
     private _refreshTimerId: string;
     onCreate(): void {
         this._timeCount = 0;
-        const localData = DataReader.file.GameLevel.get(this.data.gameLevel);
+        const localData = excel.file.GameLevel.get(this.data.gameLevel);
         this.data.gameStart = true;
         this.data.gameEnd = false;
         this.data.killsCount = localData.killsCount;
         this.data.enemyAttack = localData.attack;
         this.data.enemyHP = localData.HP;
-        this.data.battleTime = DataReader.file.Const.get("battleTime").value;
-        this.data.enemyUpdateTime = DataReader.file.Const.get("enemyUpdateTime").value;
+        this.data.battleTime = excel.file.Const.get("battleTime").value;
+        this.data.enemyUpdateTime = excel.file.Const.get("enemyUpdateTime").value;
     }
 
     public battleEnd() {

@@ -1,0 +1,258 @@
+{
+    "Const": {
+        "heroMoveSpeed": {
+            "key": "heroMoveSpeed",
+            "value": 100
+        },
+        "enemyMoveSpeed": {
+            "key": "enemyMoveSpeed",
+            "value": 50
+        },
+        "battleTime": {
+            "key": "battleTime",
+            "value": 60
+        },
+        "enemyUpdateTime": {
+            "key": "enemyUpdateTime",
+            "value": 3
+        },
+        "enemyCount": {
+            "key": "enemyCount",
+            "value": 10
+        },
+        "killsCount": {
+            "key": "killsCount",
+            "value": 40
+        },
+        "attackCd": {
+            "key": "attackCd",
+            "value": 0.1
+        },
+        "coinRewards": {
+            "key": "coinRewards",
+            "value": 20
+        },
+        "expRewards": {
+            "key": "expRewards",
+            "value": 30
+        }
+    },
+    "GameLevel": {
+        "1": {
+            "id": 1,
+            "killsCount": 25,
+            "attack": 4,
+            "HP": 5
+        },
+        "2": {
+            "id": 2,
+            "killsCount": 30,
+            "attack": 5,
+            "HP": 6
+        },
+        "3": {
+            "id": 3,
+            "killsCount": 35,
+            "attack": 6,
+            "HP": 7
+        },
+        "4": {
+            "id": 4,
+            "killsCount": 40,
+            "attack": 7,
+            "HP": 8
+        },
+        "5": {
+            "id": 5,
+            "killsCount": 45,
+            "attack": 8,
+            "HP": 9
+        },
+        "6": {
+            "id": 6,
+            "killsCount": 50,
+            "attack": 9,
+            "HP": 10
+        },
+        "7": {
+            "id": 7,
+            "killsCount": 55,
+            "attack": 10,
+            "HP": 11
+        },
+        "8": {
+            "id": 8,
+            "killsCount": 60,
+            "attack": 11,
+            "HP": 12
+        },
+        "9": {
+            "id": 9,
+            "killsCount": 65,
+            "attack": 12,
+            "HP": 13
+        },
+        "10": {
+            "id": 10,
+            "killsCount": 70,
+            "attack": 13,
+            "HP": 14
+        }
+    },
+    "HeroWeapon": {
+        "1100": {
+            "id": 1100,
+            "name": "手枪",
+            "type": 1,
+            "bulletCount": 1,
+            "bulletSpeed": 2000,
+            "attack": 2,
+            "attackDistance": 1000,
+            "cd": 0.5,
+            "level": 1
+        }
+    },
+    "WeaponLevel": {
+        "1": {
+            "id": 1,
+            "attackRate": 10,
+            "cdRate": 10,
+            "cost": 50
+        },
+        "2": {
+            "id": 2,
+            "attackRate": 15,
+            "cdRate": 18,
+            "cost": 100
+        },
+        "3": {
+            "id": 3,
+            "attackRate": 20,
+            "cdRate": 26,
+            "cost": 300
+        },
+        "4": {
+            "id": 4,
+            "attackRate": 30,
+            "cdRate": 34,
+            "cost": 600
+        },
+        "5": {
+            "id": 5,
+            "attackRate": 40,
+            "cdRate": 42,
+            "cost": 1000
+        },
+        "6": {
+            "id": 6,
+            "attackRate": 55,
+            "cdRate": 50,
+            "cost": 1500
+        },
+        "7": {
+            "id": 7,
+            "attackRate": 70,
+            "cdRate": 58,
+            "cost": 2100
+        },
+        "8": {
+            "id": 8,
+            "attackRate": 90,
+            "cdRate": 66,
+            "cost": 2800
+        },
+        "9": {
+            "id": 9,
+            "attackRate": 110,
+            "cdRate": 74,
+            "cost": 3600
+        },
+        "10": {
+            "id": 10,
+            "attackRate": 150,
+            "cdRate": 82,
+            "cost": 4500
+        }
+    },
+    "Wing": {
+        "1": {
+            "ID": 1,
+            "IDLevel": "1_1",
+            "Level": 1
+        },
+        "2": {
+            "ID": 2,
+            "IDLevel": "2_1",
+            "Level": 1
+        }
+    },
+    "Hero": {
+        "1000": {
+            "id": 1000,
+            "name": "希尔达",
+            "HP": 20,
+            "level": 1,
+            "exp": 100
+        }
+    },
+    "HeroLevel": {
+        "1": {
+            "id": 1,
+            "HP": 100,
+            "exp": 100
+        },
+        "2": {
+            "id": 2,
+            "HP": 110,
+            "exp": 200
+        },
+        "3": {
+            "id": 3,
+            "HP": 125,
+            "exp": 500
+        },
+        "4": {
+            "id": 4,
+            "HP": 145,
+            "exp": 900
+        },
+        "5": {
+            "id": 5,
+            "HP": 170,
+            "exp": 1600
+        },
+        "6": {
+            "id": 6,
+            "HP": 200,
+            "exp": 2500
+        },
+        "7": {
+            "id": 7,
+            "HP": 235,
+            "exp": 3500
+        },
+        "8": {
+            "id": 8,
+            "HP": 275,
+            "exp": 5000
+        },
+        "9": {
+            "id": 9,
+            "HP": 320,
+            "exp": 7000
+        },
+        "10": {
+            "id": 10,
+            "HP": 370,
+            "exp": 10000
+        }
+    },
+    "Enemy": {
+        "1000": {
+            "id": 1000,
+            "name": "水怪",
+            "HP": 5,
+            "attack": 4
+        }
+    }
+}

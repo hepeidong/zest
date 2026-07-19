@@ -1,5 +1,5 @@
 import { Prefab } from "cc";
-import { app, Debug, decorator, ecs, IAssetRegister, IRegister, ui } from "../../../cck";
+import { app, Debug, decorator, ecs, IAssetRegister, IRegister, ui } from "zest";
 import { CommandEnum } from "../../CommandEnum";
 import { GameBattleView } from "./GameBattleView";
 import { EventType } from "../../EventType";
@@ -10,12 +10,12 @@ import { DataType } from "../../battleSystem/dataType";
 import { UIEnum } from "../../UIEnum";
 import { BattleModel } from "../../model/BattleModel";
 
-const {cckclass, template, bundle} = decorator;
+const {zestClass, template, bundle} = decorator;
 
-@cckclass("GameBattle")
+@zestClass("GameBattle")
 @bundle("battle")
 @template("./battleView/BattleView")
-export class GameBattle extends ui.WinForm<GameBattleView> {
+export class GameBattle extends ui.GameWindow<GameBattleView> {
 
     listAssetUrls(assetRegister: IAssetRegister) {
         assetRegister.addFilePath("./battleMap/battle0");
@@ -34,7 +34,7 @@ export class GameBattle extends ui.WinForm<GameBattleView> {
         register.reg(EventType.REFRESH_ENEMY, this.refreshEnemy, this);
         register.addCommand(CommandEnum.RockingCommand);
         register.addCommand(CommandEnum.BattleCommand);
-        return ui.Type.ROOT;
+        return ui.Type.ROOT_LAYER;
     }
 
     onLoad(): void {
@@ -45,9 +45,9 @@ export class GameBattle extends ui.WinForm<GameBattleView> {
     private _battleModel: BattleModel;
     onStart(...args: any[]): void {
         this.view.setMap(this.getGameAsset("battle0", Prefab));
-        const model: HeroModel = app.getModel(ModelEnum.HeroModel);
+        const model: HeroModel = app.game.getModel(ModelEnum.HeroModel);
         this.view.updateHpProgress(model.data.currentHp / model.data.hp);
-        this._battleModel = app.getModel(ModelEnum.BattleModel);
+        this._battleModel = app.game.getModel(ModelEnum.BattleModel);
         this.view.initBattleInfo(this._battleModel.data.killsCount, this._battleModel.data.gameLevel);
         this.updateKillsCount(0);
     }
@@ -55,9 +55,9 @@ export class GameBattle extends ui.WinForm<GameBattleView> {
     onClose() {
         //游戏结束后，离开当前页面时一定要销毁世界，否则ecs仍然在运行中
         ecs.destroyWorld();
-        app.removeModel(ModelEnum.BattleModel);
-        app.removeModel(ModelEnum.HeroModel);
-        app.removeModel(ModelEnum.RockingModel);
+        app.game.removeModel(ModelEnum.BattleModel);
+        app.game.removeModel(ModelEnum.HeroModel);
+        app.game.removeModel(ModelEnum.RockingModel);
     }
 
     private gunFire(body: BulletData) {
@@ -65,7 +65,7 @@ export class GameBattle extends ui.WinForm<GameBattleView> {
     }
 
     private updateHp(currentHp: number) {
-        const model: HeroModel = app.getModel(ModelEnum.HeroModel);
+        const model: HeroModel = app.game.getModel(ModelEnum.HeroModel);
         this.view.updateHpProgress(currentHp / model.data.hp);
     }
 

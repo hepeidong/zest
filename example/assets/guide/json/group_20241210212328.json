@@ -1,0 +1,305 @@
+{
+    "group_20241210212328_29102f3d": {
+        "guideId": "group_20241210212328_29102f3d",
+        "guideType": 5,
+        "syncId": "group_20241210212328_22f3607f",
+        "name": "摄像机引导",
+        "data": {
+            "targetId": [
+                "106",
+                "106"
+            ],
+            "uiId": "GameHall",
+            "delay": 1,
+            "easing": "fade",
+            "showType": 2,
+            "cameraId": "1000"
+        }
+    },
+    "group_20241210212328_22f3607f": {
+        "guideId": "group_20241210212328_22f3607f",
+        "guideType": 0,
+        "syncId": "group_20241210212328_573cdb2b",
+        "name": "手指引导",
+        "data": {
+            "targetId": [
+                "100",
+                "101",
+                "102"
+            ],
+            "uiId": "GameHall",
+            "showType": 2,
+            "repeatTotal": 999,
+            "speed": 2,
+            "easing": "fade"
+        }
+    },
+    "group_20241210212328_573cdb2b": {
+        "guideId": "group_20241210212328_573cdb2b",
+        "guideType": 0,
+        "syncId": "group_20241210212328_7ee6c078",
+        "name": "手指引导",
+        "data": {
+            "targetId": [
+                "101"
+            ],
+            "uiId": "GameHall",
+            "showType": 2,
+            "repeatTotal": 0,
+            "speed": 2,
+            "easing": "fade"
+        }
+    },
+    "group_20241210212328_7ee6c078": {
+        "guideId": "group_20241210212328_7ee6c078",
+        "guideType": 0,
+        "syncId": "group_20241210212328_f93fa63e",
+        "name": "手指引导",
+        "data": {
+            "targetId": [
+                "102"
+            ],
+            "uiId": "GameHall",
+            "showType": 2,
+            "repeatTotal": 0,
+            "speed": 2,
+            "easing": "fade"
+        }
+    },
+    "group_20241210212328_f93fa63e": {
+        "guideId": "group_20241210212328_f93fa63e",
+        "guideType": 0,
+        "syncId": "group_20241210212328_dddd8169",
+        "name": "手指引导",
+        "data": {
+            "targetId": [
+                "103"
+            ],
+            "uiId": "GameHall",
+            "showType": 2,
+            "repeatTotal": 0,
+            "speed": 2,
+            "easing": "fade"
+        }
+    },
+    "group_20241210212328_dddd8169": {
+        "guideId": "group_20241210212328_dddd8169",
+        "guideType": 2,
+        "syncId": "group_20241210212328_2795edd5",
+        "name": "文本引导",
+        "data": {
+            "targetId": [
+                "104"
+            ],
+            "descript": "即将开启下一步引导",
+            "uiId": "GuideTest1",
+            "showType": 2
+        }
+    },
+    "group_20241210212328_2795edd5": {
+        "guideId": "group_20241210212328_2795edd5",
+        "guideType": 0,
+        "syncId": "group_20241210212328_9770a418",
+        "name": "手指引导",
+        "data": {
+            "targetId": [
+                "104"
+            ],
+            "uiId": "GuideTest1",
+            "showType": 2,
+            "repeatTotal": 0,
+            "speed": 2,
+            "easing": "fade"
+        }
+    },
+    "group_20241210212328_9770a418": {
+        "guideId": "group_20241210212328_9770a418",
+        "guideType": 1,
+        "syncId": "group_20241210212328_933829b8",
+        "name": "对话引导",
+        "data": {
+            "roleId": "100",
+            "actorMoveModel": "move",
+            "easing": "fade",
+            "startPosition": {
+                "x": 500,
+                "y": 0
+            },
+            "position": {
+                "x": 100,
+                "y": 0
+            },
+            "duration": 2,
+            "actorAction": "into",
+            "source": "2.png/spriteFrame",
+            "sourceType": "image",
+            "name": "张三",
+            "animatName": "",
+            "descript": "",
+            "audio": ""
+        }
+    },
+    "group_20241210212328_933829b8": {
+        "guideId": "group_20241210212328_933829b8",
+        "guideType": 1,
+        "syncId": "group_20241210212328_db9bb811",
+        "name": "对话引导",
+        "data": {
+            "roleId": "100",
+            "actorMoveModel": "",
+            "easing": "",
+            "startPosition": {
+                "x": 0,
+                "y": 0
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "duration": 0,
+            "actorAction": "dialog",
+            "source": "",
+            "sourceType": "",
+            "name": "张三",
+            "descript": "你好啊，我叫<color=00ff00>张三</color>，这是一个对话引导！！",
+            "audio": "audio/LevelWinSound.mp3"
+        }
+    },
+    "group_20241210212328_db9bb811": {
+        "guideId": "group_20241210212328_db9bb811",
+        "guideType": 1,
+        "syncId": "group_20241210212328_91dfcecc",
+        "name": "对话引导",
+        "data": {
+            "roleId": "100",
+            "actorMoveModel": "",
+            "easing": "",
+            "startPosition": {
+                "x": 0,
+                "y": 0
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "duration": 0,
+            "actorAction": "dialog",
+            "source": "",
+            "sourceType": "",
+            "name": "张三",
+            "descript": "好的，我知道了，谢谢你！",
+            "audio": "audio/lobby.mp3"
+        }
+    },
+    "group_20241210212328_91dfcecc": {
+        "guideId": "group_20241210212328_91dfcecc",
+        "guideType": 1,
+        "syncId": "group_20241210212328_9e4db978",
+        "name": "对话引导",
+        "data": {
+            "roleId": "100",
+            "actorMoveModel": "",
+            "easing": "",
+            "startPosition": {
+                "x": 0,
+                "y": 0
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "duration": 0,
+            "actorAction": "dialog",
+            "source": "",
+            "sourceType": "",
+            "name": "张三",
+            "descript": "不用跟我客气，你这个家伙。",
+            "audio": "audio/ConFlipSound.mp3"
+        }
+    },
+    "group_20241210212328_9e4db978": {
+        "guideId": "group_20241210212328_9e4db978",
+        "guideType": 1,
+        "syncId": "group_20241210212328_bb6dd5c7",
+        "name": "对话引导",
+        "data": {
+            "roleId": "100",
+            "actorMoveModel": "move",
+            "easing": "fade",
+            "startPosition": {
+                "x": 0,
+                "y": 0
+            },
+            "position": {
+                "x": 500,
+                "y": 0
+            },
+            "duration": 2,
+            "actorAction": "out",
+            "source": "",
+            "sourceType": "",
+            "name": "张三",
+            "animatName": "",
+            "descript": "",
+            "audio": ""
+        }
+    },
+    "group_20241210212328_bb6dd5c7": {
+        "guideId": "group_20241210212328_bb6dd5c7",
+        "guideType": 3,
+        "syncId": "group_20241210212328_7c2a45f6",
+        "name": "图片引导",
+        "data": {
+            "imageId": "100",
+            "imageGuideType": "fadeIn",
+            "source": "5.png/spriteFrame",
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "easing": "fade",
+            "duration": "2"
+        }
+    },
+    "group_20241210212328_7c2a45f6": {
+        "guideId": "group_20241210212328_7c2a45f6",
+        "guideType": 3,
+        "syncId": "group_20241210212328_a5be2e04",
+        "name": "图片引导",
+        "data": {
+            "imageId": "100",
+            "imageGuideType": "fadeOut",
+            "source": "",
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "easing": "fade",
+            "duration": "2"
+        }
+    },
+    "group_20241210212328_a5be2e04": {
+        "guideId": "group_20241210212328_a5be2e04",
+        "guideType": 4,
+        "syncId": "group_20241210212328_92a30296",
+        "name": "动画引导",
+        "data": {
+            "animationId": "CG1_v1.0",
+            "animationType": "play",
+            "source": "anim/CG1_v1.0.prefab",
+            "audio": "audio/explore.mp3"
+        }
+    },
+    "group_20241210212328_92a30296": {
+        "guideId": "group_20241210212328_92a30296",
+        "guideType": 4,
+        "syncId": "",
+        "name": "动画引导",
+        "data": {
+            "animationId": "CG1_v1.0",
+            "animationType": "move",
+            "source": "",
+            "audio": ""
+        }
+    }
+}

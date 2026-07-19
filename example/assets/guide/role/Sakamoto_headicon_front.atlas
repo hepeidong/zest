@@ -1,0 +1,62 @@
+
+Sakamoto_headicon_front.png
+size: 383,961
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/Sakamoto
+  rotate: false
+  xy: 1, 132
+  size: 381, 828
+  orig: 381, 828
+  offset: 0, 0
+  index: -1
+images/ang
+  rotate: false
+  xy: 107, 1
+  size: 104, 62
+  orig: 381, 828
+  offset: 138, 667
+  index: -1
+images/fea
+  rotate: false
+  xy: 109, 64
+  size: 105, 67
+  orig: 381, 828
+  offset: 138, 667
+  index: -1
+images/nor
+  rotate: false
+  xy: 215, 4
+  size: 105, 63
+  orig: 381, 828
+  offset: 138, 668
+  index: -1
+images/sad
+  rotate: false
+  xy: 1, 68
+  size: 107, 63
+  orig: 381, 828
+  offset: 137, 668
+  index: -1
+images/sho
+  rotate: false
+  xy: 1, 1
+  size: 105, 66
+  orig: 381, 828
+  offset: 138, 668
+  index: -1
+images/sli
+  rotate: true
+  xy: 321, 26
+  size: 105, 60
+  orig: 381, 828
+  offset: 138, 667
+  index: -1
+images/smi
+  rotate: false
+  xy: 215, 68
+  size: 105, 63
+  orig: 381, 828
+  offset: 138, 668
+  index: -1

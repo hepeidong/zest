@@ -1,5 +1,5 @@
 import { Vec3 } from "cc";
-import { app, Debug, decorator, Direction, ecs, IEntity, utils } from "../../cck";
+import { app, Debug, decorator, Direction, ecs, IEntity, utils } from "zest";
 import { RockingModel } from "../model/RockingModel";
 import { ModelEnum } from "../ModelEnum";
 import { DataType, DirectionData, NpcIdentity, Position } from "./dataType";
@@ -8,7 +8,7 @@ import { NpcType } from "../../lib/NpcTypeEnum";
 import { BattleModel } from "../model/BattleModel";
 import { CameraPool } from "../CameraPool";
 
-const {cckclass, updateInGroup, updateAfter} = decorator;
+const {zestClass, updateInGroup, updateAfter} = decorator;
 
 const _vec3Temp = new Vec3();
 const _vec3CameraTemp = new Vec3();
@@ -19,7 +19,7 @@ interface IMoveEntity extends IEntity {
     NpcIdentity: NpcIdentity;
 }
 
-@cckclass("MoveSystem")
+@zestClass("MoveSystem")
 @updateInGroup(ecs.SimulationGroup)
 @updateAfter(DirectionSystem)
 export class MoveSystem extends ecs.System<IMoveEntity> {
@@ -28,8 +28,8 @@ export class MoveSystem extends ecs.System<IMoveEntity> {
     private _rockingModel: RockingModel;
     protected onCreate(): void {
         _vec3CameraTemp.set(0, 0);
-        this._battleModel = app.getModel(ModelEnum.BattleModel);
-        this._rockingModel = app.getModel(ModelEnum.RockingModel);
+        this._battleModel = app.game.getModel(ModelEnum.BattleModel);
+        this._rockingModel = app.game.getModel(ModelEnum.RockingModel);
     }
 
     protected onStart(): void {
@@ -108,7 +108,7 @@ export class MoveSystem extends ecs.System<IMoveEntity> {
 
     private boundariesX(x: number) {
         const mapWidth1 = this._rockingModel.data.mapSize.width / 2 - 60;
-        const mapWidth2 = this._rockingModel.data.mapSize.width / 2 - app.adapterManager.getScreenSize().width / 2 - app.adapterManager.width;
+        const mapWidth2 = this._rockingModel.data.mapSize.width / 2 - app.adapter.getScreenSize().width / 2 - app.adapter.width;
         const mapBoundaries = x > -mapWidth1 && x < mapWidth1;
         const cameraBoundaries = x > -mapWidth2 && x < mapWidth2;
         return {mapBoundaries, cameraBoundaries};
@@ -116,7 +116,7 @@ export class MoveSystem extends ecs.System<IMoveEntity> {
 
     private boundariesY(y: number) {
         const mapHeight1 = this._rockingModel.data.mapSize.height / 2 - 60;
-        const mapHeight2 = this._rockingModel.data.mapSize.height / 2 - app.adapterManager.getScreenSize().height / 2 + app.adapterManager.height;
+        const mapHeight2 = this._rockingModel.data.mapSize.height / 2 - app.adapter.getScreenSize().height / 2 + app.adapter.height;
         const mapBoundaries = y > -mapHeight1 && y < mapHeight1;
         const cameraBoundaries = y > -mapHeight2 && y < mapHeight2;
         return {mapBoundaries, cameraBoundaries};

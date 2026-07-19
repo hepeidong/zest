@@ -1,11 +1,11 @@
 import { _decorator, Node, sp, Collider2D, Contact2DType, IPhysics2DContact } from 'cc';
-import { Animat, animat, app, Debug } from '../../../cck';
+import { TweenAnimat, tweenAnimat, app, Debug, ITweenAnimat } from "zest";
 import { ResConst } from '../../const';
 import { ColliderGroup } from './BattleDefine';
 const { ccclass, property } = _decorator;
 
 @ccclass('Enemy')
-export class Enemy extends app.BaseView {
+export class Enemy extends app.BaseLayout {
 
     @property(sp.Skeleton)
     private spine: sp.Skeleton = null;
@@ -67,9 +67,10 @@ export class Enemy extends app.BaseView {
         }
     }
 
-    private _animat: Animat;
+    private _animat: ITweenAnimat;
     public createEnemy(filename: string) {
-        this._animat = animat(this.spine.node, "battle").spine({
+        this._animat = tweenAnimat(this.spine.node, "battle");
+        this._animat.spine({
             name: "fx_monster_arise_layer01",
             url: ResConst.SPINE_ANIMATION + "fx_arise",
             repeatCount: 1

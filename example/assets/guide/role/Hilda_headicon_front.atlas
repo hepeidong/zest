@@ -1,0 +1,62 @@
+
+Hilda_headicon_front.png
+size: 963,375
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Hilda
+  rotate: true
+  xy: 1, 1
+  size: 373, 764
+  orig: 373, 764
+  offset: 0, 0
+  index: -1
+ang
+  rotate: false
+  xy: 766, 222
+  size: 117, 76
+  orig: 117, 76
+  offset: 0, 0
+  index: -1
+fea
+  rotate: true
+  xy: 884, 136
+  size: 117, 75
+  orig: 117, 75
+  offset: 0, 0
+  index: -1
+nor
+  rotate: false
+  xy: 766, 299
+  size: 120, 75
+  orig: 120, 75
+  offset: 0, 0
+  index: -1
+sad
+  rotate: false
+  xy: 766, 146
+  size: 117, 75
+  orig: 117, 75
+  offset: 0, 0
+  index: -1
+sho
+  rotate: true
+  xy: 766, 25
+  size: 120, 73
+  orig: 120, 73
+  offset: 0, 0
+  index: -1
+sil
+  rotate: false
+  xy: 840, 67
+  size: 122, 68
+  orig: 122, 68
+  offset: 0, 0
+  index: -1
+smi
+  rotate: true
+  xy: 887, 254
+  size: 120, 75
+  orig: 120, 75
+  offset: 0, 0
+  index: -1

@@ -1,9 +1,9 @@
-import { app, decorator, ui } from "../../cck";
+import { app, decorator, guide, ui } from "zest";
 import { UIEnum } from "../UIEnum";
 
-const {cckclass, template} = decorator;
+const {zestClass, template} = decorator;
 
-@cckclass("HallScene")
+@zestClass("HallScene")
 @template("hall")
 export class HallScene extends app.Scene {
 
@@ -12,6 +12,8 @@ export class HallScene extends app.Scene {
     }
 
     onStart() {
+        guide.manager.syncGuideGroup(guide.group.TestGroup);
+        ui.openTouchEffect(true);
         ui.open(UIEnum.GameHall);
     }
 }

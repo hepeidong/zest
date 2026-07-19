@@ -1,5 +1,5 @@
 import { Vec3 } from "cc";
-import { app, Debug, decorator, Direction, ecs, IEntity, tools, utils } from "../../cck";
+import { app, Debug, decorator, Direction, ecs, IEntity, tools, utils } from "zest";
 import { RockingModel } from "../model/RockingModel";
 import { ModelEnum } from "../ModelEnum";
 import { DataType, AttackTarget, NpcIdentity, HeroWeapon } from "./dataType";
@@ -7,7 +7,7 @@ import { MoveSystem } from "./MoveSystem";
 import { NpcType } from "../../lib/NpcTypeEnum";
 import { Hero } from "../view/battleView/Hero";
 
-const {cckclass, updateInGroup, updateAfter} = decorator;
+const {zestClass, updateInGroup, updateAfter} = decorator;
 
 interface ICurrentEntity extends IEntity {
     NpcIdentity: NpcIdentity;
@@ -34,7 +34,7 @@ let CACHE_DISTANCE = 20000;
 const _vec3Temp = new Vec3();
 const _vec3EnemyTemp = new Vec3();
 
-@cckclass("FineEnemySystem")
+@zestClass("FineEnemySystem")
 @updateInGroup(ecs.SimulationGroup)
 @updateAfter(MoveSystem)
 export class FineEnemySystem extends ecs.System<ICurrentEntity> {
@@ -45,7 +45,7 @@ export class FineEnemySystem extends ecs.System<ICurrentEntity> {
     private _rockingModel: RockingModel;
     protected onCreate(): void {
         this._found = false;
-        this._rockingModel = app.getModel(ModelEnum.RockingModel);
+        this._rockingModel = app.game.getModel(ModelEnum.RockingModel);
     }
 
     private findEnemy(entity: ICurrentEntity) {

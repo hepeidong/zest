@@ -1,11 +1,11 @@
-import { IEntity, app, decorator, ecs } from "../../cck";
+import { IEntity, app, decorator, ecs } from "zest";
 import { NpcType } from "../../lib/NpcTypeEnum";
 import { ModelEnum } from "../ModelEnum";
 import { BattleModel } from "../model/BattleModel";
 import { FineEnemySystem } from "./FineEnemySystem";
 import { DataType, HeroWeapon, NpcIdentity } from "./dataType";
 
-const {cckclass, updateBefore} = decorator;
+const {zestClass, updateBefore} = decorator;
 
 interface IWeaponCdEntity extends IEntity {
     NpcIdentity: NpcIdentity;
@@ -13,7 +13,7 @@ interface IWeaponCdEntity extends IEntity {
 }
 
 
-@cckclass("WeaponCdSystem")
+@zestClass("WeaponCdSystem")
 @updateBefore(FineEnemySystem)
 export class WeaponCdSystem extends ecs.System<IWeaponCdEntity> {
 
@@ -25,7 +25,7 @@ export class WeaponCdSystem extends ecs.System<IWeaponCdEntity> {
         this._flag = false;
         this._cdEnd = false;
         this._timeout = 0;
-        this._statusModel = app.getModel(ModelEnum.BattleModel);
+        this._statusModel = app.game.getModel(ModelEnum.BattleModel);
     }
 
     private executeWeaponCd(dt: number, entity: IWeaponCdEntity, index: number) {

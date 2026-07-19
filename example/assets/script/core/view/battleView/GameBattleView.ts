@@ -1,5 +1,5 @@
 import { _decorator, Node, instantiate, Prefab, Vec2, Vec3, EventTouch, UITransform, sp } from 'cc';
-import { animat, DataReader, Debug, decorator, ecs, IConversionSystem, IConvertToEntity, RockingBar, ui, utils } from '../../../cck';
+import { tweenAnimat, excel, Debug, decorator, ecs, IConversionSystem, IConvertToEntity, RockingBar, ui, utils } from "zest";
 import { DataType, NpcEntity } from '../../battleSystem/dataType';
 import { CommandEnum, NoticeType } from '../../CommandEnum';
 import { NodePool } from 'cc';
@@ -14,7 +14,7 @@ const {convertToEntity} = decorator;
 
 @ccclass('GameBattleView')
 @convertToEntity
-export class GameBattleView extends ui.WinView implements IConvertToEntity {
+export class GameBattleView extends ui.GameLayout implements IConvertToEntity {
 
     @property(Node)
     private map: Node = null;
@@ -59,7 +59,7 @@ export class GameBattleView extends ui.WinView implements IConvertToEntity {
     start() {
         this._heroBulletPool = new NodePool();
         this._enemyBulletPool = new NodePool();
-        this.battleTime.string = utils.StringUtil.format("时间：%s", DataReader.file.Const.get("battleTime").value);
+        this.battleTime.string = utils.StringUtil.format("时间：%s", excel.file.Const.get("battleTime").value);
     }
 
     declareReference(conversionSystem: IConversionSystem) {
@@ -74,7 +74,7 @@ export class GameBattleView extends ui.WinView implements IConvertToEntity {
         }
         entity.NpcTemp.isEnemy = this._isEnemy;
         if (this._isEnemy) {
-            entity.NpcTemp.count = DataReader.file.Const.get("enemyCount").value;
+            entity.NpcTemp.count = excel.file.Const.get("enemyCount").value;
             entity.NpcTemp.count = 1;
             const primaryEntity = conversionSystem.getPrimaryEntity(this.enemy);
             entity.NpcTemp.entity = primaryEntity;
@@ -101,7 +101,7 @@ export class GameBattleView extends ui.WinView implements IConvertToEntity {
         //增加敌人
         this.scheduleOnce(() => {
             this._isEnemy = true;
-            animat(this.enemyTip.node).spine({
+            tweenAnimat(this.enemyTip.node).spine({
                 name: this.enemyTip.animation,
                 repeatCount: 1
             }).onStop(() => {

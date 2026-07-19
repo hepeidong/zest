@@ -1,10 +1,10 @@
 import { _decorator } from 'cc';
-import { app } from '../../cck';
+import { app } from "zest";
 import { ProgressBar } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('InterimSceneView')
-export class InterimSceneView extends app.BaseView {
+export class InterimSceneView extends app.BaseLayout {
 
     @property(ProgressBar)
     private loadProgres: ProgressBar = null;

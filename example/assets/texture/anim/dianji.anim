@@ -1,582 +1,445 @@
-{
-  "__type__": "cc.AnimationClip",
-  "_name": "dianji",
-  "_objFlags": 0,
-  "_native": "",
-  "_duration": 0.5,
-  "sample": 60,
-  "speed": 1,
-  "wrapMode": 0,
-  "curveData": {
-    "props": {
-      "scale": [],
-      "opacity": [
-        {
-          "frame": 0.4166666666666667,
-          "value": 255
-        },
-        {
-          "frame": 0.5,
-          "value": 0
-        }
-      ]
+[
+  {
+    "__type__": "cc.AnimationClip",
+    "_name": "dianji",
+    "_objFlags": 0,
+    "__editorExtras__": {
+      "embeddedPlayerGroups": []
     },
-    "paths": {
-      "dj_7": {
-        "props": {
-          "scale": [
-            {
-              "frame": 0,
-              "value": {
-                "__type__": "cc.Vec2",
-                "x": 0.3,
-                "y": 0.3
-              }
-            },
-            {
-              "frame": 0.16666666666666666,
-              "value": {
-                "__type__": "cc.Vec2",
-                "x": 1,
-                "y": 1
-              }
-            }
-          ],
-          "opacity": [
-            {
-              "frame": 0,
-              "value": 255
-            },
-            {
-              "frame": 0.25,
-              "value": 255
-            },
-            {
-              "frame": 0.4166666666666667,
-              "value": 50
-            }
-          ]
-        }
+    "_native": "",
+    "sample": 60,
+    "speed": 1,
+    "wrapMode": 0,
+    "enableTrsBlending": false,
+    "_duration": 0.5,
+    "_hash": 500763545,
+    "_tracks": [
+      {
+        "__id__": 1
       },
-      "dj_6": {
-        "props": {
-          "opacity": [
-            {
-              "frame": 0,
-              "value": 0
-            },
-            {
-              "frame": 0.08333333333333333,
-              "value": 0
-            },
-            {
-              "frame": 0.11666666666666667,
-              "value": 100
-            },
-            {
-              "frame": 0.25,
-              "value": 255
-            },
-            {
-              "frame": 0.4166666666666667,
-              "value": 50
-            }
-          ]
-        }
+      {
+        "__id__": 7
       },
-      "dj_5": {
-        "props": {
-          "position": [
-            {
-              "frame": 0,
-              "value": [
-                1,
-                1
-              ],
-              "motionPath": []
-            },
-            {
-              "frame": 0.16666666666666666,
-              "value": [
-                -28.1,
-                36.4
-              ],
-              "motionPath": []
-            },
-            {
-              "frame": 0.25,
-              "value": [
-                -69,
-                51
-              ],
-              "motionPath": []
-            },
-            {
-              "frame": 0.4166666666666667,
-              "value": [
-                -113.3,
-                58.8
-              ],
-              "motionPath": []
-            }
-          ],
-          "angle": [
-            {
-              "frame": 0,
-              "value": 1
-            },
-            {
-              "frame": 0.16666666666666666,
-              "value": 60
-            },
-            {
-              "frame": 0.25,
-              "value": 130
-            }
-          ],
-          "opacity": [
-            {
-              "frame": 0.16666666666666666,
-              "value": 255
-            },
-            {
-              "frame": 0.4166666666666667,
-              "value": 50
-            }
-          ]
-        }
+      {
+        "__id__": 13
       },
-      "dj_4": {
-        "props": {
-          "position": [
-            {
-              "frame": 0,
-              "value": [
-                0,
-                0,
-                0
-              ]
-            },
-            {
-              "frame": 0.08333333333333333,
-              "value": [
-                -24.967,
-                5.201,
-                0
-              ]
-            },
-            {
-              "frame": 0.16666666666666666,
-              "value": [
-                -51.22,
-                13.715,
-                0
-              ]
-            },
-            {
-              "frame": 0.2,
-              "value": [
-                -50.974,
-                15.604,
-                0
-              ]
-            },
-            {
-              "frame": 0.25,
-              "value": [
-                -82.136,
-                22.585,
-                0
-              ]
-            },
-            {
-              "frame": 0.4166666666666667,
-              "value": [
-                -120.626,
-                16.343,
-                0
-              ]
-            }
-          ],
-          "opacity": [
-            {
-              "frame": 0.25,
-              "value": 200
-            },
-            {
-              "frame": 0.4166666666666667,
-              "value": 50
-            }
-          ],
-          "angle": [
-            {
-              "frame": 0.08333333333333333,
-              "value": 20
-            },
-            {
-              "frame": 0.16666666666666666,
-              "value": 50
-            },
-            {
-              "frame": 0.25,
-              "value": 90
-            },
-            {
-              "frame": 0.4166666666666667,
-              "value": 150
-            }
-          ]
-        }
+      {
+        "__id__": 19
       },
-      "dj_3": {
-        "props": {
-          "position": [
-            {
-              "frame": 0,
-              "value": [
-                0,
-                0
-              ],
-              "motionPath": []
-            },
-            {
-              "frame": 0.08333333333333333,
-              "value": [
-                11.4,
-                31.2
-              ],
-              "motionPath": []
-            },
-            {
-              "frame": 0.16666666666666666,
-              "value": [
-                28,
-                43.2,
-                0
-              ]
-            },
-            {
-              "frame": 0.25,
-              "value": [
-                51.926,
-                51.522,
-                0
-              ]
-            },
-            {
-              "frame": 0.4166666666666667,
-              "value": [
-                87.309,
-                54.427,
-                0
-              ]
-            }
-          ],
-          "opacity": [
-            {
-              "frame": 0.25,
-              "value": 200
-            },
-            {
-              "frame": 0.4166666666666667,
-              "value": 50
-            }
-          ],
-          "angle": [
-            {
-              "frame": 0.08333333333333333,
-              "value": 50
-            },
-            {
-              "frame": 0.16666666666666666,
-              "value": 90
-            },
-            {
-              "frame": 0.25,
-              "value": 130
-            },
-            {
-              "frame": 0.4166666666666667,
-              "value": 170
-            }
-          ]
-        }
+      {
+        "__id__": 25
       },
-      "dj_2": {
-        "props": {
-          "position": [
-            {
-              "frame": 0,
-              "value": [
-                0,
-                0,
-                0
-              ]
-            },
-            {
-              "frame": 0.08333333333333333,
-              "value": [
-                -4.161,
-                30.168,
-                0
-              ]
-            },
-            {
-              "frame": 0.16666666666666666,
-              "value": [
-                -18.009,
-                46.672,
-                0
-              ]
-            },
-            {
-              "frame": 0.25,
-              "value": [
-                -39.659,
-                85.983,
-                0
-              ]
-            },
-            {
-              "frame": 0.4166666666666667,
-              "value": [
-                -71.865,
-                102.609,
-                0
-              ]
-            }
-          ],
-          "angle": [
-            {
-              "frame": 0.08333333333333333,
-              "value": 40
-            },
-            {
-              "frame": 0.16666666666666666,
-              "value": 60
-            },
-            {
-              "frame": 0.25,
-              "value": 120
-            },
-            {
-              "frame": 0.4166666666666667,
-              "value": 160
-            }
-          ],
-          "opacity": [
-            {
-              "frame": 0.25,
-              "value": 200
-            },
-            {
-              "frame": 0.4166666666666667,
-              "value": 50
-            }
-          ]
-        }
+      {
+        "__id__": 31
       },
-      "dj_1": {
-        "props": {
-          "position": [
-            {
-              "frame": 0,
-              "value": [
-                0,
-                0,
-                0
-              ]
-            },
-            {
-              "frame": 0.08333333333333333,
-              "value": [
-                29.127,
-                10.403,
-                0
-              ]
-            },
-            {
-              "frame": 0.16666666666666666,
-              "value": [
-                51.119,
-                26.264,
-                0
-              ]
-            },
-            {
-              "frame": 0.25,
-              "value": [
-                71.407,
-                29.252,
-                0
-              ]
-            },
-            {
-              "frame": 0.4166666666666667,
-              "value": [
-                105.511,
-                29.252,
-                0
-              ]
-            }
-          ],
-          "opacity": [
-            {
-              "frame": 0.25,
-              "value": 200
-            },
-            {
-              "frame": 0.4166666666666667,
-              "value": 50
-            }
-          ],
-          "angle": [
-            {
-              "frame": 0.08333333333333333,
-              "value": -30
-            },
-            {
-              "frame": 0.16666666666666666,
-              "value": -80
-            },
-            {
-              "frame": 0.25,
-              "value": -90
-            },
-            {
-              "frame": 0.4166666666666667,
-              "value": -160
-            }
-          ]
-        }
+      {
+        "__id__": 37
       },
-      "dj_0": {
-        "props": {
-          "position": [
-            {
-              "frame": 0,
-              "value": [
-                0,
-                0
-              ],
-              "motionPath": []
-            },
-            {
-              "frame": 0.08333333333333333,
-              "value": [
-                -27,
-                -14
-              ],
-              "motionPath": []
-            },
-            {
-              "frame": 0.16666666666666666,
-              "value": [
-                -37,
-                -52
-              ],
-              "motionPath": []
-            },
-            {
-              "frame": 0.25,
-              "value": [
-                -31.074,
-                -91.202,
-                0
-              ]
-            },
-            {
-              "frame": 0.4166666666666667,
-              "value": [
-                -23.988,
-                -120.727,
-                0
-              ]
-            }
-          ],
-          "opacity": [
-            {
-              "frame": 0,
-              "value": 255
-            },
-            {
-              "frame": 0.25,
-              "value": 255
-            },
-            {
-              "frame": 0.4166666666666667,
-              "value": 50
-            }
-          ],
-          "angle": [
-            {
-              "frame": 0,
-              "value": 0
-            },
-            {
-              "frame": 0.08333333333333333,
-              "value": 30
-            },
-            {
-              "frame": 0.16666666666666666,
-              "value": 70
-            },
-            {
-              "frame": 0.25,
-              "value": 90
-            },
-            {
-              "frame": 0.4166666666666667,
-              "value": 160
-            }
-          ]
-        }
+      {
+        "__id__": 43
       },
-      "dj_8": {
-        "props": {
-          "scale": [
-            {
-              "frame": 0,
-              "value": {
-                "__type__": "cc.Vec2",
-                "x": 0.6,
-                "y": 0.6
-              }
-            },
-            {
-              "frame": 0.11666666666666667,
-              "value": {
-                "__type__": "cc.Vec2",
-                "x": 1,
-                "y": 1
-              }
-            },
-            {
-              "frame": 0.25,
-              "value": {
-                "__type__": "cc.Vec2",
-                "x": 1,
-                "y": 1
-              }
-            }
-          ],
-          "opacity": [
-            {
-              "frame": 0,
-              "value": 255
-            },
-            {
-              "frame": 0.25,
-              "value": 255
-            },
-            {
-              "frame": 0.4166666666666667,
-              "value": 50
-            }
-          ]
-        }
+      {
+        "__id__": 49
       }
+    ],
+    "_exoticAnimation": null,
+    "_events": [],
+    "_embeddedPlayers": []
+  },
+  {
+    "__type__": "cc.animation.ObjectTrack",
+    "_binding": {
+      "__type__": "cc.animation.TrackBinding",
+      "path": {
+        "__id__": 2
+      },
+      "proxy": null
+    },
+    "_channel": {
+      "__id__": 5
     }
   },
-  "events": []
-}
+  {
+    "__type__": "cc.animation.TrackPath",
+    "_paths": [
+      {
+        "__id__": 3
+      },
+      {
+        "__id__": 4
+      },
+      "spriteFrame"
+    ]
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "dj_7"
+  },
+  {
+    "__type__": "cc.animation.ComponentPath",
+    "component": "cc.Sprite"
+  },
+  {
+    "__type__": "cc.animation.Channel",
+    "_curve": {
+      "__id__": 6
+    }
+  },
+  {
+    "__type__": "cc.ObjectCurve",
+    "_times": [],
+    "_values": []
+  },
+  {
+    "__type__": "cc.animation.ObjectTrack",
+    "_binding": {
+      "__type__": "cc.animation.TrackBinding",
+      "path": {
+        "__id__": 8
+      },
+      "proxy": null
+    },
+    "_channel": {
+      "__id__": 11
+    }
+  },
+  {
+    "__type__": "cc.animation.TrackPath",
+    "_paths": [
+      {
+        "__id__": 9
+      },
+      {
+        "__id__": 10
+      },
+      "spriteFrame"
+    ]
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "dj_8"
+  },
+  {
+    "__type__": "cc.animation.ComponentPath",
+    "component": "cc.Sprite"
+  },
+  {
+    "__type__": "cc.animation.Channel",
+    "_curve": {
+      "__id__": 12
+    }
+  },
+  {
+    "__type__": "cc.ObjectCurve",
+    "_times": [],
+    "_values": []
+  },
+  {
+    "__type__": "cc.animation.ObjectTrack",
+    "_binding": {
+      "__type__": "cc.animation.TrackBinding",
+      "path": {
+        "__id__": 14
+      },
+      "proxy": null
+    },
+    "_channel": {
+      "__id__": 17
+    }
+  },
+  {
+    "__type__": "cc.animation.TrackPath",
+    "_paths": [
+      {
+        "__id__": 15
+      },
+      {
+        "__id__": 16
+      },
+      "spriteFrame"
+    ]
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "dj_6"
+  },
+  {
+    "__type__": "cc.animation.ComponentPath",
+    "component": "cc.Sprite"
+  },
+  {
+    "__type__": "cc.animation.Channel",
+    "_curve": {
+      "__id__": 18
+    }
+  },
+  {
+    "__type__": "cc.ObjectCurve",
+    "_times": [],
+    "_values": []
+  },
+  {
+    "__type__": "cc.animation.ObjectTrack",
+    "_binding": {
+      "__type__": "cc.animation.TrackBinding",
+      "path": {
+        "__id__": 20
+      },
+      "proxy": null
+    },
+    "_channel": {
+      "__id__": 23
+    }
+  },
+  {
+    "__type__": "cc.animation.TrackPath",
+    "_paths": [
+      {
+        "__id__": 21
+      },
+      {
+        "__id__": 22
+      },
+      "spriteFrame"
+    ]
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "dj_5"
+  },
+  {
+    "__type__": "cc.animation.ComponentPath",
+    "component": "cc.Sprite"
+  },
+  {
+    "__type__": "cc.animation.Channel",
+    "_curve": {
+      "__id__": 24
+    }
+  },
+  {
+    "__type__": "cc.ObjectCurve",
+    "_times": [],
+    "_values": []
+  },
+  {
+    "__type__": "cc.animation.ObjectTrack",
+    "_binding": {
+      "__type__": "cc.animation.TrackBinding",
+      "path": {
+        "__id__": 26
+      },
+      "proxy": null
+    },
+    "_channel": {
+      "__id__": 29
+    }
+  },
+  {
+    "__type__": "cc.animation.TrackPath",
+    "_paths": [
+      {
+        "__id__": 27
+      },
+      {
+        "__id__": 28
+      },
+      "spriteFrame"
+    ]
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "dj_4"
+  },
+  {
+    "__type__": "cc.animation.ComponentPath",
+    "component": "cc.Sprite"
+  },
+  {
+    "__type__": "cc.animation.Channel",
+    "_curve": {
+      "__id__": 30
+    }
+  },
+  {
+    "__type__": "cc.ObjectCurve",
+    "_times": [],
+    "_values": []
+  },
+  {
+    "__type__": "cc.animation.ObjectTrack",
+    "_binding": {
+      "__type__": "cc.animation.TrackBinding",
+      "path": {
+        "__id__": 32
+      },
+      "proxy": null
+    },
+    "_channel": {
+      "__id__": 35
+    }
+  },
+  {
+    "__type__": "cc.animation.TrackPath",
+    "_paths": [
+      {
+        "__id__": 33
+      },
+      {
+        "__id__": 34
+      },
+      "spriteFrame"
+    ]
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "dj_3"
+  },
+  {
+    "__type__": "cc.animation.ComponentPath",
+    "component": "cc.Sprite"
+  },
+  {
+    "__type__": "cc.animation.Channel",
+    "_curve": {
+      "__id__": 36
+    }
+  },
+  {
+    "__type__": "cc.ObjectCurve",
+    "_times": [],
+    "_values": []
+  },
+  {
+    "__type__": "cc.animation.ObjectTrack",
+    "_binding": {
+      "__type__": "cc.animation.TrackBinding",
+      "path": {
+        "__id__": 38
+      },
+      "proxy": null
+    },
+    "_channel": {
+      "__id__": 41
+    }
+  },
+  {
+    "__type__": "cc.animation.TrackPath",
+    "_paths": [
+      {
+        "__id__": 39
+      },
+      {
+        "__id__": 40
+      },
+      "spriteFrame"
+    ]
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "dj_2"
+  },
+  {
+    "__type__": "cc.animation.ComponentPath",
+    "component": "cc.Sprite"
+  },
+  {
+    "__type__": "cc.animation.Channel",
+    "_curve": {
+      "__id__": 42
+    }
+  },
+  {
+    "__type__": "cc.ObjectCurve",
+    "_times": [],
+    "_values": []
+  },
+  {
+    "__type__": "cc.animation.ObjectTrack",
+    "_binding": {
+      "__type__": "cc.animation.TrackBinding",
+      "path": {
+        "__id__": 44
+      },
+      "proxy": null
+    },
+    "_channel": {
+      "__id__": 47
+    }
+  },
+  {
+    "__type__": "cc.animation.TrackPath",
+    "_paths": [
+      {
+        "__id__": 45
+      },
+      {
+        "__id__": 46
+      },
+      "spriteFrame"
+    ]
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "dj_1"
+  },
+  {
+    "__type__": "cc.animation.ComponentPath",
+    "component": "cc.Sprite"
+  },
+  {
+    "__type__": "cc.animation.Channel",
+    "_curve": {
+      "__id__": 48
+    }
+  },
+  {
+    "__type__": "cc.ObjectCurve",
+    "_times": [],
+    "_values": []
+  },
+  {
+    "__type__": "cc.animation.ObjectTrack",
+    "_binding": {
+      "__type__": "cc.animation.TrackBinding",
+      "path": {
+        "__id__": 50
+      },
+      "proxy": null
+    },
+    "_channel": {
+      "__id__": 53
+    }
+  },
+  {
+    "__type__": "cc.animation.TrackPath",
+    "_paths": [
+      {
+        "__id__": 51
+      },
+      {
+        "__id__": 52
+      },
+      "spriteFrame"
+    ]
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "dj_0"
+  },
+  {
+    "__type__": "cc.animation.ComponentPath",
+    "component": "cc.Sprite"
+  },
+  {
+    "__type__": "cc.animation.Channel",
+    "_curve": {
+      "__id__": 54
+    }
+  },
+  {
+    "__type__": "cc.ObjectCurve",
+    "_times": [],
+    "_values": []
+  }
+]

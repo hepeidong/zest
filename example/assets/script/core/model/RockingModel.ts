@@ -1,7 +1,7 @@
 import { Size, Vec3 } from "cc";
-import { Debug, Direction, app, decorator } from "../../cck";
+import { Debug, Direction, app, decorator } from "zest";
 
-const {cckclass, model} = decorator;
+const {zestClass, model} = decorator;
 
 class RockingData {
     direction: Direction.Type = Direction.Type.None;
@@ -11,7 +11,7 @@ class RockingData {
     angle: number;
 }
 
-@cckclass("RockingModel")
+@zestClass("RockingModel")
 @model(RockingData)
 export class RockingModel extends app.Document<RockingData> {
     onCreate(): void {

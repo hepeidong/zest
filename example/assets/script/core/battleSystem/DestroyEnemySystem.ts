@@ -1,16 +1,16 @@
-import { IEntity, decorator, ecs } from "../../cck";
+import { IEntity, decorator, ecs } from "zest";
 import { NpcType } from "../../lib/NpcTypeEnum";
 import { Enemy } from "../view/battleView/Enemy";
 import { DirectionSystem } from "./DirectionSystem";
 import { DataType, NpcIdentity } from "./dataType";
 
-const {cckclass, updateBefore} = decorator;
+const {zestClass, updateBefore} = decorator;
 
 interface IEnemyEntity extends IEntity {
     NpcIdentity: NpcIdentity;
 }
 
-@cckclass("DestroyEnemySystem")
+@zestClass("DestroyEnemySystem")
 @updateBefore(DirectionSystem)
 export class DestroyEnemySystem extends ecs.System<IEnemyEntity> {
 

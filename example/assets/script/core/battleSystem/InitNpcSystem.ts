@@ -1,5 +1,5 @@
 import { Vec3 } from "cc";
-import { app, DataReader, Debug, decorator, Direction, ecs, IBeginEntityCommandBufferSystem, IConversionSystem, IEntity, utils } from "../../cck";
+import { app, excel, Debug, decorator, Direction, ecs, IBeginEntityCommandBufferSystem, IConversionSystem, IEntity, utils } from "zest";
 import { RockingModel } from "../model/RockingModel";
 import { Enemy } from "../view/battleView/Enemy";
 import { Hero } from "../view/battleView/Hero";
@@ -8,7 +8,7 @@ import { ModelEnum } from "../ModelEnum";
 import { NpcType } from "../../lib/NpcTypeEnum";
 import { BattleModel } from "../model/BattleModel";
 
-const {cckclass, updateInGroup} = decorator;
+const {zestClass, updateInGroup} = decorator;
 
 interface INewEntity extends IEntity {
     Direction: DirectionData;
@@ -22,7 +22,7 @@ const _vec3Temp = new Vec3();
 /**
  * 初始化包括英雄角色在内的所有战斗场景NPC角色
  */
-@cckclass("InitNpcSystem")
+@zestClass("InitNpcSystem")
 @updateInGroup(ecs.InitializationGroup)
 export class InitNpcSystem extends ecs.System<NpcEntity> {
 
@@ -30,8 +30,8 @@ export class InitNpcSystem extends ecs.System<NpcEntity> {
     private _battleModel: BattleModel;
     private _initializationCommandBuffer: IBeginEntityCommandBufferSystem;
     protected onCreate(): void {
-        this._rockingModel = app.getModel(ModelEnum.RockingModel);
-        this._battleModel = app.getModel(ModelEnum.BattleModel);
+        this._rockingModel = app.game.getModel(ModelEnum.RockingModel);
+        this._battleModel = app.game.getModel(ModelEnum.BattleModel);
         this._initializationCommandBuffer = ecs.World.instance.getBeginCommandBuffer(ecs.World.CommandBuffer.InitializationCommandBuffer);
     }
 
@@ -99,28 +99,29 @@ export class InitNpcSystem extends ecs.System<NpcEntity> {
             newEntity.node.position = _vec3Temp;
             newEntity.node.getComponent(Hero).createHero("Hilda");
             newEntity.NpcIdentity.identity = NpcType.Hero;
-            newEntity.NpcIdentity.hp = DataReader.file.Hero.get(1000).HP;
+            newEntity.NpcIdentity.hp = excel.file.Hero.get(1000).HP;
             newEntity.addComponent(DataType.HeroWeapon);
-            newEntity.HeroWeapon.bulletCount = DataReader.file.HeroWeapon.get(1100).bulletCount;
-            newEntity.HeroWeapon.bulletSpeed = DataReader.file.HeroWeapon.get(1100).bulletSpeed;
-            newEntity.HeroWeapon.weaponType = DataReader.file.HeroWeapon.get(1100).type;
-            newEntity.HeroWeapon.attack = DataReader.file.HeroWeapon.get(1100).attack;
-            newEntity.HeroWeapon.attackDistance = DataReader.file.HeroWeapon.get(1100).attackDistance;
-            newEntity.HeroWeapon.cd = DataReader.file.HeroWeapon.get(1100).cd;
+            newEntity.HeroWeapon.bulletCount = excel.file.HeroWeapon.get(1100).bulletCount;
+            newEntity.HeroWeapon.bulletSpeed = excel.file.HeroWeapon.get(1100).bulletSpeed;
+            newEntity.HeroWeapon.weaponType = excel.file.HeroWeapon.get(1100).type;
+            newEntity.HeroWeapon.attack = excel.file.HeroWeapon.get(1100).attack;
+            newEntity.HeroWeapon.attackDistance = excel.file.HeroWeapon.get(1100).attackDistance;
+            newEntity.HeroWeapon.cd = excel.file.HeroWeapon.get(1100).cd;
             this._rockingModel.data.heroPos.set(_vec3Temp.x, _vec3Temp.y);
         }
     }
 
     private addGameObject(entity: NpcEntity, conversionSystem: IConversionSystem) {
+        const count = entity.NpcTemp.count;
         if (entity.NpcTemp.isEnemy) {
-            for (let i = 0; i < entity.NpcTemp.count; ++i) {
+            for (let i = 0; i < count; ++i) {
                 this.createNpcEntity(entity, conversionSystem);
             }
             //创建完npc实体后要马上销毁用于初始化的实体（即那个让当前系统运行的实体），以免下一帧的时候再运行该系统，造成重复创建npc实体
             this.destroyEntity(entity);
         }
         else {
-            for (let i = 0; i < entity.NpcTemp.count; ++i) {
+            for (let i = 0; i < count; ++i) {
                 this.createNpcEntity(entity, conversionSystem);
             }
             //创建完npc实体后要马上销毁用于初始化的实体（即那个让当前系统运行的实体），以免下一帧的时候再运行该系统，造成重复创建npc实体

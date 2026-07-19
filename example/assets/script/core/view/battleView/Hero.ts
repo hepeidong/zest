@@ -1,5 +1,5 @@
 import { _decorator, Component, Node, sp, Contact2DType, Collider2D, IPhysics2DContact, Prefab, Vec3, NodePool, instantiate, tween } from 'cc';
-import { animat, Animat, app, Debug } from '../../../cck';
+import { tweenAnimat, TweenAnimat, app, Debug, ITweenAnimat } from "zest";
 import { ResConst } from '../../const';
 import { EventType } from '../../EventType';
 import { BulletData, BulletType, ColliderGroup } from './BattleDefine';
@@ -8,7 +8,7 @@ const { ccclass, property } = _decorator;
 const _vec3Temp = new Vec3();
 
 @ccclass('Hero')
-export class Hero extends app.BaseView {
+export class Hero extends app.BaseLayout {
     @property(sp.Skeleton)
     private spine: sp.Skeleton = null;
 
@@ -68,10 +68,10 @@ export class Hero extends app.BaseView {
         this._contacted = false;
     }
 
-    private _gunAnimat: Animat;
-    private _animat: Animat;
+    private _gunAnimat: ITweenAnimat;
+    private _animat: ITweenAnimat;
     public createHero(filename: string) {
-        this._animat = animat(this.spine.node, "battle")
+        this._animat = tweenAnimat(this.spine.node, "battle")
         this._animat.spine({
             name: "idle",
             url: ResConst.SPINE_HERO + filename,
@@ -112,12 +112,14 @@ export class Hero extends app.BaseView {
             loop: false
         }).onStop(() => {
             this._die = true;
-        }).play();
+        }).play().catch(err => {
+            Debug.error("英雄死亡动画播放错误：", err);
+        });
     }
 
     public gunFire(time: number, target: Vec3) {
         if (!this._gunAnimat) {
-            this._gunAnimat = animat(this.gunSpine.node, "battle");
+            this._gunAnimat = tweenAnimat(this.gunSpine.node, "battle");
         }
         this._gunAnimat
         .spine({name: "attack", repeatCount: 1})
