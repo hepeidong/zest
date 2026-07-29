@@ -1,9 +1,9 @@
-import { IBaseEntity, IListener } from "zest";
+import { IEntity, IListener } from "zest";
 import { tools } from "../tools";
 import { JobHandler } from "./JobHandler";
 import { CCSystem } from "./System";
 
-export class EntityCommandBufferSystem extends CCSystem<IBaseEntity> {
+export class EntityCommandBufferSystem extends CCSystem<IEntity> {
     protected _jobQueue: tools.Queue<JobHandler<any>>;
     protected _handlerPool: tools.ObjectPool<JobHandler<IListener>>;
     constructor() {

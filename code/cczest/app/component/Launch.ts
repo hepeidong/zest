@@ -27,7 +27,7 @@ export  class Launch extends Component {
 
     @property({
         type: Prefab,
-        tooltip: "挂载有触摸点击特效的预制体",
+        tooltip: "挂载有触摸点击特效帧动画的预制体",
         displayName: "触摸点击特效"
     })
     private effect: Prefab = null;

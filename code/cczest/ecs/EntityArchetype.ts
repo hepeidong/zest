@@ -14,7 +14,7 @@ export class EntityArchetype<T extends IBaseEntity> implements IEntityArchetype<
     private _version: string;              //组id, 该组的唯一标示, 与系统id一致
     private _types: number[];         //该组成员实体身上需要挂载的组件, 用于区分实体是否属于该组
     private _entityChunk: T[];
-    private _onGroupReleased: IGroupChange<GroupChange, IArchetypeChunk<T>>;     //组释放事件, 用于移除ECSEntityService管理中的组
+    private _onGroupReleased: IGroupChange<GroupChange, IArchetypeChunk<T>>;     //组释放事件, 用于移除ArchetypeChunk管理中的组
     constructor(archetypeChunk: IArchetypeChunk<T>) {
         this._valid           = false;
         this._reference       = [];

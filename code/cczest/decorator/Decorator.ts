@@ -43,7 +43,8 @@ export function setParentType(key: string, type: Function) {
 
 /**
  * 设置游戏的初始场景
- * @param sceneName 
+ * 注：传入的是场景脚本，而不是场景
+ * @param sceneName 场景脚本
  * @returns 
  */
 function startScene(sceneName: string) {

@@ -1,11 +1,11 @@
 import { CCSystem } from "./System";
 import { SystemUpdateSequenceSettingException } from "./exceptions/SystemUpdateSequenceSettingException";
 import { asUpdateAfter, asUpdateBefore, asUpdateInGroup, removeElement } from "./ecs-utils";
-import { IBaseEntity, ISystem, ISystemGroup } from "zest";
+import { IBaseEntity, IEntity, ISystem, ISystemGroup } from "zest";
 import { Debug } from "../Debugger";
 import { EndEntityCommandBufferSystem } from "./EndEntityCommandBufferSystem";
 
-export class CCSystemGroup extends CCSystem<IBaseEntity> implements ISystemGroup {
+export class CCSystemGroup extends CCSystem<IEntity> implements ISystemGroup {
     private _subSystems: ISystem<IBaseEntity>[];
     constructor() {
         super("SystemGroup");

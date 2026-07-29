@@ -1,4 +1,4 @@
-import { IBaseEntity } from "zest";
+import { IEntity } from "zest";
 import { InitializationSystemGroup, PresentationSystemGroup, SimulationSystemGroup } from "./ComponentSystemGroup";
 import { setEcsDebug } from "./ECSDef";
 import { CCSystem } from "./System";
@@ -32,7 +32,7 @@ export class ecs {
 }
 
 export namespace ecs {
-    export class System<T extends IBaseEntity> extends CCSystem<T> {}
+    export class System<T extends IEntity> extends CCSystem<T> {}
     /**系统组只用于组织某种类型的系统，即一种系统的容器，不应在此实现游戏逻辑 */
     export class SystemGroup extends CCSystemGroup {}
     export class World extends CCWorld {
