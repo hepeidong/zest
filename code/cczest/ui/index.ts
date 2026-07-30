@@ -40,7 +40,7 @@ export namespace ui {
     export class GameWindow<T extends IGameLayout> extends CCGameWindow<T> {}
 
     /**
-     * 打开触摸特效，默认是打开的，可以通过这个函数控制什么时候可以显示触摸特效，什么时候不显示触摸特效
+     * 打开触摸特效，可以通过这个函数控制什么时候可以显示触摸特效，什么时候不显示触摸特效
      * @param open 
      */
     export function openTouchEffect(open: boolean) {

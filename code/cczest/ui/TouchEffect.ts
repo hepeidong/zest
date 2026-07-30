@@ -73,28 +73,32 @@ export class TouchEffect {
                 touchListener.setSwallowTouches(false);
             }
         }
-        this._touchParent.on(Node.EventType.TOUCH_START, (evt: EventTouch) => {
-            if (overversion) {
-                evt.preventSwallow = true;
-            }
-            this.play(evt.getUILocation());
-        }, this);
-        this._touchParent.on(Node.EventType.TOUCH_END, (evt: EventTouch) => {
-            if (overversion) {
-                evt.preventSwallow = true;
-            }
-        });
-        this._touchParent.on(Node.EventType.TOUCH_CANCEL, (evt: EventTouch) => {
-            if (overversion) {
-                evt.preventSwallow = true;
-            }
-        });
+        if (this._touchParent instanceof Node) {
+            this._touchParent.on(Node.EventType.TOUCH_START, (evt: EventTouch) => {
+                if (overversion) {
+                    evt.preventSwallow = true;
+                }
+                this.play(evt.getUILocation());
+            }, this);
+            this._touchParent.on(Node.EventType.TOUCH_END, (evt: EventTouch) => {
+                if (overversion) {
+                    evt.preventSwallow = true;
+                }
+            });
+            this._touchParent.on(Node.EventType.TOUCH_CANCEL, (evt: EventTouch) => {
+                if (overversion) {
+                    evt.preventSwallow = true;
+                }
+            });
+        }
     }
 
     private removeEvent() {
-        this._touchParent.off(Node.EventType.TOUCH_START);
-        this._touchParent.off(Node.EventType.TOUCH_END);
-        this._touchParent.off(Node.EventType.TOUCH_CANCEL);
+        if (this._touchParent instanceof Node) {
+            this._touchParent.off(Node.EventType.TOUCH_START);
+            this._touchParent.off(Node.EventType.TOUCH_END);
+            this._touchParent.off(Node.EventType.TOUCH_CANCEL);
+        }
     }
 
     private play(worldPos: Vec2) {
